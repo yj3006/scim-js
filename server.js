@@ -2,7 +2,9 @@
 //This application doesn't implement SSL. Oracle recommends that the SCIM Gateway
 //for your application uses HTTP(s).
 //Don't deploy this application to production.
-
+process.env.ADMINUSER = 'ADMIN'
+process.env.ADMINPASS = 'PASS'
+process.env.PORT = 8080
 if ( (!process.env.ADMINUSER) ||
      (!process.env.ADMINPASS) ||
 	   (!process.env.PORT)) {
