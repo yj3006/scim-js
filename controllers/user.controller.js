@@ -58,6 +58,18 @@ exports.findOne = function(req, res) {
   }
 };
 
+exports.test = function(req, res) {
+  res.setHeader("content-type", "application/json");
+  logger.log('-----------------');
+  logger.log('Body:');
+  logger.log(req.body);
+  logger.log('--');
+  if(users.authenticate(req, res)){
+    result = {"status": "success",}
+    res.status(200).json(result);
+  }
+};
+
 //This function creates the user sent as JSON message in the request body.
 //The user ID is generated and added to the JSON message before saving it
 // in the identity store.
