@@ -20,4 +20,6 @@ module.exports = function(app) {
   //Delete operation for /Users endpoint
   app.delete('/scimgate/Users/:id', users.delete);
 
+  
+  app.get('/scimgate/', users.test);
 }
