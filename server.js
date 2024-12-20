@@ -5,6 +5,8 @@
 process.env.ADMINUSER = 'ADMIN'
 process.env.ADMINPASS = 'PASS'
 process.env.PORT = 8080
+process.env.MODE='bearer'
+process.env.BEARER_TOKEN='randomtokenfortesting123456789'
 if ( (!process.env.ADMINUSER) ||
      (!process.env.ADMINPASS) ||
 	   (!process.env.PORT)) {
