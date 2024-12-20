@@ -19,7 +19,7 @@ var sequenceNumber = 10;
 //This function returns a list of all users for the target system.
 //The list is in JSON format and contains the attribute "resources" with the
 // value of an array of JSON objects representing each user and their attributes.
-exports.findAll = function(req, res) {
+exports.findAll = function (req, res) {
   res.setHeader("content-type", "application/scim+json");
   logger.log('-----------------');
   logger.log('Entering users findAll function.');
@@ -36,7 +36,7 @@ exports.findAll = function(req, res) {
 
     // Apply filters from query parameters
     if (req.query.filter) {
-      const filter = req.query.filter;
+      const filter = decodeURIComponent(req.query.filter);
 
       // Example: Parsing `userName eq "value"`
       const match = filter.match(/(\w+)\s+eq\s+"(.+?)"/);
