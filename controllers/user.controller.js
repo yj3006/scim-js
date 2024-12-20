@@ -64,10 +64,8 @@ exports.test = function(req, res) {
   logger.log('Body:');
   logger.log(req.body);
   logger.log('--');
-  if(users.authenticate(req, res)){
-    result = {"status": "success",}
-    res.status(200).json(result);
-  }
+  result = {"status": "success",}
+  res.status(200).json(result);
 };
 
 //This function creates the user sent as JSON message in the request body.
