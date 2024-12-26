@@ -3,7 +3,7 @@
     {
       "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:starsuite:params:scim:schemas:extension:custom:2.0:User"
+        "urn:ietf:params:scim:schemas:extension:starsuite:2.0:User"
       ],
       "id": "1",
       "externalId": "1",
@@ -31,7 +31,7 @@
     {
       "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:starsuite:params:scim:schemas:extension:custom:2.0:User"
+        "urn:ietf:params:scim:schemas:extension:starsuite:2.0:User"
       ],
       "userName": "user2@example.com",
       "name": {
@@ -51,7 +51,7 @@
       ],
       "id": "2",
       "externalId": "2",
-      "urn:starsuite:params:scim:schemas:extension:custom:2.0:User": {
+      "urn:ietf:params:scim:schemas:extension:starsuite:2.0:User": {
         "plant": "Factory-01",
         "onBoard": "2023-05-15"
       }
