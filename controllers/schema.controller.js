@@ -1,6 +1,7 @@
 //References
 const fs = require('graceful-fs');
 const config = require('../config.js');
+var users = require('./user.controller.js');
 var schemas = require('./schema.controller.js');
 // let jwt = require('jsonwebtoken');
 
@@ -14,13 +15,11 @@ var auth = require('basic-auth');
 // the userdb.json file.
 var sequenceNumber = 10;
 
-//This function returns a list of all users for the target system.
-//The list is in JSON format and contains the attribute "resources" with the
-// value of an array of JSON objects representing each user and their attributes.
+//This function returns the schema for the target system.
 exports.findAll = function (req, res) {
   res.setHeader("content-type", "application/scim+json");
   logger.log('-----------------');
-  logger.log('Entering users findAll function.');
+  logger.log('Entering schema findAll function.');
   logger.log('Body:');
   logger.log(req.body);
   logger.log('Query:');
@@ -29,7 +28,7 @@ exports.findAll = function (req, res) {
 
   // Check credentials
   if (users.authenticate(req, res)) {
-    const userIDStore = JSON.parse(fs.readFileSync('./userdb.json', 'utf8'));
+    const userIDStore = JSON.parse(fs.readFileSync('./schemas/starsuite-user-extension-schema.json', 'utf8'));
     let filteredUsers = userIDStore.resources;
 
     // Apply filters from query parameters
