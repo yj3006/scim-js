@@ -29,6 +29,7 @@ var config = require('./config.js');
 //Routes to Users endpoint
 require('./routes/users.js')(app);
 require('./routes/groups.js')(app);
+require('./routes/schemas.js')(app);
 
 // Set Port
 app.set('port', (process.env.PORT || config.APP_DEFAULT_PORT));
