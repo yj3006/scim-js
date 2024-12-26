@@ -1,25 +1,21 @@
 {
-  "id": "urn:starsuite:params:scim:schemas:extension:custom:2.0:User",
+  "id": "urn:ietf:params:scim:schemas:extension:starsuite:2.0:User",
   "name": "StarSuiteCustomExtension",
   "description": "StarSuite custom schema for extending User attributes",
   "attributes": [
     {
       "name": "plant",
       "type": "string",
-      "multiValued": false,
       "required": false,
-      "caseExact": false,
       "mutability": "readWrite",
-      "returned": "default"
+      "description": "A custom attribute for user's plant"
     },
     {
       "name": "onBoard",
       "type": "string",
-      "multiValued": false,
       "required": false,
-      "caseExact": false,
       "mutability": "readWrite",
-      "returned": "default"
+      "description": "Custom attribute for user onboarding status"
     }
   ]
 }
