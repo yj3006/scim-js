@@ -15,7 +15,41 @@ const coreUserSchema = {
   id: "urn:ietf:params:scim:schemas:core:2.0:User",
   name: "User",
   description: "Core User schema",
-  attributes: [
+  attributes: [{
+      name: "id",
+      type: "string",
+      required: true,
+      mutability: "readOnly",
+      description: "Unique identifier for the user"
+    },
+    {
+      name: "userName",
+      type: "string",
+      required: true,
+      mutability: "readWrite",
+      description: "The unique name used to identify the user"
+    },
+    {
+      name: "name",
+      type: "complex",
+      required: false,
+      mutability: "readWrite",
+      description: "The user's full name",
+      subAttributes: [
+        {
+          name: "givenName",
+          type: "string",
+          required: false,
+          mutability: "readWrite",
+        },
+        {
+          name: "familyName",
+          type: "string",
+          required: false,
+          mutability: "readWrite",
+        }
+      ]
+    }
   ]
 };
 
