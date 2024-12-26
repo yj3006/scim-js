@@ -36,9 +36,6 @@ exports.findAll = function (req, res) {
   if (users.authenticate(req, res)) {
     const schemaExtension = JSON.parse(fs.readFileSync('./schemas/starsuite-user-extension-schema.json', 'utf8'));
 
-    
-
-    logger.log('Found ' + filteredUsers.length + ' users.');
     res.status(200).json([coreUserSchema, schemaExtension]);
   }
 };
