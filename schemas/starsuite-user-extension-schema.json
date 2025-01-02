@@ -1,5 +1,5 @@
 {
-  "id": "urn:ietf:params:scim:schemas:extension:starsuite:2.0:User",
+  "id": "urn:ietf:params:scim:schemas:extension:customappsso:2.0:User",
   "name": "StarSuiteCustomExtension",
   "description": "StarSuite custom schema for extending User attributes",
   "attributes": [
